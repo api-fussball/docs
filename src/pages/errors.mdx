@@ -1,0 +1,65 @@
+export const description =
+  'In In diesem Leitfaden werden wir darüber sprechen, was passiert, wenn bei der Arbeit mit der API etwas schief geht.'
+
+# Fehler
+
+In In diesem Leitfaden werden wir darüber sprechen, was passiert, wenn bei der Arbeit mit der API etwas schief geht. Fehler passieren, und meistens sind es deine Fehler, nicht unsere. Sehen wir uns einige Statuscodes und Fehlertypen an, auf die du stoßen könntest. {{ className: 'lead' }}
+
+Du kannst feststellen, ob deine Anfrage erfolgreich war, indem du den Statuscode überprüfst, wenn du eine API-Antwort erhältst.
+Wenn eine Antwort nicht erfolgreich war, kannst du anhand des Fehlertyps und der Fehlermeldung herausfinden,
+was schief gelaufen ist, und eine rudimentäre Fehlersuche durchführen.
+
+<Note>
+    Bevor du dich mit einer Fehlermeldung an den Support wendest, solltest du wissen, dass 99 % aller gemeldeten Fehler in Wirklichkeit Benutzerfehler sind.
+    Prüfe daher deinen Code sorgfältig, bevor du dich an den Protokoll-Support wendest.
+</Note>
+
+---
+
+## Status codes
+
+Hier findest du eine Liste der verschiedenen Kategorien von Statuscodes, die von der Protokoll-API zurückgegeben werden.
+Nutze diese, um zu verstehen, ob eine Anfrage erfolgreich war.
+
+<Properties>
+  <Property name="2xx">
+      Ein 2xx-Statuscode zeigt eine erfolgreiche Antwort an.
+  </Property>
+  <Property name="4xx">
+      Ein 4xx-Statuscode weist auf einen Client-Fehler hin - das heißt, es ist ein _dein_ Problem.
+  </Property>
+  <Property name="5xx">
+      Ein 5xx-Statuscode weist auf einen Serverfehler hin - du wirst diesen nicht sehen.
+  </Property>
+</Properties>
+
+---
+
+## Error types
+
+<Row>
+  <Col>
+      Fehlertyp und einer Fehlermeldung zurück. Du kannst diese Informationen nutzen, um besser zu verstehen, was schief gelaufen ist und wie du es beheben kannst. Die meisten Fehlermeldungen sind sehr hilfreich und können behoben werden.
+
+      Hier ist eine Liste der beiden Fehlertypen, die von der Protokoll-API unterstützt werden - nutze diese, um zu verstehen, was du falsch gemacht hast.
+    <Properties>
+      <Property name="Token in header: 'x-auth-token' not found">
+          Ein Clientfehler ist aufgetreten" bedeutet, dass du in deine Anfrage einen Header "x-auth-token" vergessen hast.
+      </Property>
+      <Property name="Empty Content for url:...">
+          Das bedeutet, dass die ID der fussball.de URL, die du kopiert hast, nicht korrekt ist.
+      </Property>
+    </Properties>
+
+  </Col>
+  <Col>
+
+    ```bash {{ title: "Error response" }}
+      {
+          "message": "Token in header: \"x-auth-token\" not found",
+          "success": false,
+          "data": []
+      }
+    ```
+  </Col>
+</Row>

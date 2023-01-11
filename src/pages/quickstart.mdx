@@ -1,0 +1,45 @@
+export const description =
+  'In diesem Leitfaden erfährst du, wie du die Protokoll-API einrichten und nutzen kannst.'
+
+# Quickstart
+
+In diesem Leitfaden erfährst du, wie du die Protokoll-API einrichten und nutzen kannst.
+Ich zeige dir, wie du einen unserer API-Clients verwendest und wie du deine erste API-Anfrage stellst.
+Außerdem erfährst du, wo du als nächstes alle Informationen findest, die du benötigst, um die Vorteile unserer leistungsstarken REST-API voll auszuschöpfen.
+
+<Note>
+    Bevor du Anfragen an die Protokoll-API stellen kannst,
+    musst du dir deinen API-Schlüssel von deinem Dashboard holen.
+    Du findest ihn unter [authentication](/authentication).
+</Note>
+
+## Deine erste API-Anfrage stellen
+
+Du kannst mit einfachen Anfragen die Informationen von Fussball.de erhalten.
+Zum Beispiel, wenn wir alle Mannschaften des Vereins Borussia Dortmund abrufen möchten,
+müssen wir die entsprechende Anfrage stellen.
+
+<CodeGroup tag="GET" label="/api/club/{fussball.de_id}">
+
+```bash {{ title: 'cURL' }}
+curl -G https://api-fussball.de/api/club/00ES8GN8N400008VVV0AG08LVUPGND5I \
+  -H "x-auth-token: {token}"
+```
+</CodeGroup>
+
+<div className="not-prose">
+  <Button
+    href="/conversations"
+    variant="text"
+    arrow="right"
+    children="Lies die Dokumentation für den Club-Endpunkt"
+  />
+</div>
+
+## Wie geht es weiter?
+
+Gut, du hast nun einen API-Client eingerichtet und deine erste Anfrage an die API gestellt. Hier findest du einige Links, die dir bei der weiteren Erforschung der Protokoll-API nützlich sein können:
+
+- [Grab your API key from the Protocol dashboard](#)
+{/*- [Check out the Conversations endpoint](/conversations)*/}
+{/*- [Learn about the different error messages in Protocol](/errors)*/}
