@@ -185,11 +185,12 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: '',
+    title: 'Doku',
     links: [
       { title: 'Start', href: '/' },
       { title: 'Quickstart', href: '/quickstart' },
       { title: 'Authentication', href: '/authentication' },
+      { title: 'Fussball-Id', href: '/fussball_de_id' },
       { title: 'Errors', href: '/errors' },
     ],
   },
