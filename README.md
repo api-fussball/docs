@@ -1,3 +1,12 @@
+
+# Documentation for api-fussball.de
+
+
+## Developent
+
+This setup is based on the [Next.js](https://nextjs.org/) with [Next.js](https://nextjs.org/).
+
+
 Next, run the development server:
 
 ```bash
