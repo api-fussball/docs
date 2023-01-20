@@ -19,7 +19,7 @@ function useAutocomplete() {
   let [autocomplete] = useState(() =>
     createAutocomplete({
       id,
-      placeholder: 'Find something...',
+      placeholder: 'Finde etwas...',
       defaultActiveItemId: 0,
       onStateChange({ state }) {
         setAutocompleteState(state)
