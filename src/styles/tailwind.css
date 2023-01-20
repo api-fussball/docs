@@ -13,3 +13,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo-text{
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img{
+  width: 50px;
+}
+
+.dark  .logo-text {
+  color: theme('colors.white');
+}
