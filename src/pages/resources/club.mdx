@@ -3,37 +3,9 @@ export const description =
 
 # Club
 
+__Model:__ [`club-info`](/model/club_info)
+
 Der Club-Endpunkt liefert dir alle Informationen eines Vereins, die du auf Fussball.de unter "Mannschaften des Vereins" sehen kannst.  {{ className: 'lead' }}
-
-## Club-model
-
-Das Club-Modell bietet dir detailliertere Informationen, mit welchen du Informationen über jedes Team abrufen kannst.
-
-### Eigenschaften
-
-<Properties>
-  <Property name="fussballDeUrl" type="string">
-      URL auf Fussball.de
-  </Property>
-  <Property name="name" type="string">
-    Team Name
-  </Property>
-  <Property name="urls" type="json">
-      Das Club-Modell enthält die URLs, über die du auf detaillierte Informationen über das Team zugreifen kannst.
-  </Property>
-  <Property name="nextGames" type="string">
-      URL zum nächsten Spiel des Teams
-  </Property>
-  <Property name="prevGames" type="string">
-      URL zum letzten Spiel des Teams
-  </Property>
-  <Property name="table" type="string">
-      URL zur aktuellen Ligatabelle des Teams
-  </Property>
-  <Property name="allInfo" type="timestamp">
-      URL, wo du alle Informationen auf einmal sehen kannst. Es enthält Informationen von den letzten Spielen, den nächsten Spielen und der aktuellen Tabelle.
-  </Property>
-</Properties>
 
 ---
 

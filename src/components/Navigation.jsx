@@ -195,9 +195,15 @@ export const navigation = [
     ],
   },
   {
+    title: 'Model',
+    links: [
+      { title: 'Club-Info', href: '/model/club_info' },
+    ],
+  },
+  {
     title: 'Resources',
     links: [
-      { title: 'Club', href: '/club' },
+      { title: 'Club', href: '/resources/club' },
     ],
   },
 ]
