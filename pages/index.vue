@@ -17,7 +17,7 @@
       verschaffe
     </p>
 
-    <success-message message="Successfully uploaded" marginClass="mt-5"/>
+    <success-message message="Die Fussball-API kann derzeit kostenlos genutzt werden." marginClass="mt-5"/>
 
     <p class="mt-8">
       Um eine optimale Performance zu gewährleisten, empfehlen wir die Verwendung von Caching für erfolgreiche Anfragen.
@@ -40,7 +40,7 @@
       Erste Schritte
     </h2>
     <p class="mt-2">
-      Solltest du während der Nutzung der API Probleme oder Fehler feststellen, kannst du uns gerne über die Funktion "Issues" auf GitHub kontaktieren. Wir werden uns um eine schnelle Lösung bemühen.
+      Solltest du während der Nutzung der API Probleme oder Fehler feststellen, kannst du uns gerne über die Funktion "Issues" auf <a class="font-semibold text-emerald-700" href="https://github.com/api-fussball/api-dart/issues">GitHub</a> kontaktieren. Wir werden uns um eine schnelle Lösung bemühen.
     </p>
 
   </div>
