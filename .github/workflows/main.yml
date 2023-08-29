@@ -19,9 +19,8 @@ jobs:
           log-public-key: false
       - name: Install rsync
         run: |
-          apt-get update -y
-          apt-get install -y rsync
-
+          sudo apt-get update -y
+          sudo apt-get install -y rsync
 
       - name: Build and deploy to server
         uses: actions/setup-node@v3
