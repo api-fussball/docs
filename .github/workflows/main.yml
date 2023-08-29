@@ -17,16 +17,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           log-public-key: false
-      - name: Install rsync
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y rsync
-
       - name: Build and deploy to server
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'node'
+          cache: 'npm'
       - run: |
           pnpm install
           pnpm run build
