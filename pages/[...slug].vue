@@ -45,6 +45,8 @@ useHead({
 </template>
 
 <style scoped>
+
+
 .article-main {
   @apply p-4 max-w-6xl m-auto;
 }

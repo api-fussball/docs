@@ -21,10 +21,6 @@ export default defineNuxtConfig({
     highlight: {
     },
     markdown: {
-      toc: {
-        depth: 5,
-        searchDepth: 5
-      },
     }
   },
   tailwindcss: {
