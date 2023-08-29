@@ -17,7 +17,8 @@ const { data } = await useAsyncData(`content-/home`, async () => {
 useHead({
   title: data.value.article.title,
   meta: [
-    { name: "description", content: data.value.article.description }
+    { name: "description", content: data.value.article.description },
+    { name: "google-site-verification", content: "AEu_PjXZ33cB_5ND0Cpg7pzEoS9ZH3CSP7awxuJobe0" },
   ],
 });
 </script>

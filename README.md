@@ -25,7 +25,7 @@ pnpm run dev
 Build the application for production:
 
 ```bash
-# npm
+# pnpm
 pnpm run build
 ```
 

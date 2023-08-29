@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "name": "nuxt_fussball_api_docs",
+      "port": "3000",
+      "script": "./.output/server/index.mjs",
+      "watch": true,
+      "watch_options": {
+        "followSymlinks": false
+      },
+      "autorestart": true,
+      "restart_delay": 4000,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "out_file": "/var/log/nuxt-docs-api.log",
+      "error_file": "/var/log/nuxt-docs-api-error.log",
+      "combine_logs": true,
+      "max_memory_restart": "100M"
+    }
+  ]
+}
