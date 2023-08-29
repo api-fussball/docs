@@ -17,13 +17,15 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           log-public-key: false
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
       - name: Build and deploy to server
         uses: pnpm/action-setup@v2
         with:
             version: 8
-            run_install: |
-              - recursive: true
-              - args: [--global, gulp, prettier, typescript]
+            run_install: false
       - run: |
           pnpm install
           pnpm run build
