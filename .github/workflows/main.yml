@@ -18,9 +18,13 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           log-public-key: false
       - name: Build and deploy to server
-        uses: actions/setup-node@v3
+        uses: pnpm/action-setup@v2
         with:
-          node-version: 18
+            version: 8
+            run_install: |
+              - recursive: true
+                args: [--frozen-lockfile, --strict-peer-dependencies]
+              - args: [--global, gulp, prettier, typescript]
       - run: |
           pnpm install
           pnpm run build
