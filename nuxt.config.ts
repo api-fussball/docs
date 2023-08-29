@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     "micromark/lib/postprocess.js": "micromark",
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'nuxt-simple-sitemap'],
   content: {
     // https://content.nuxtjs.org/api/configuration
     highlight: {
@@ -25,5 +25,8 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
+  },
+  site: {
+    url: 'https://www.api-fussball.de',
   }
 })
