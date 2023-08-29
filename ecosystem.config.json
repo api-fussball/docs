@@ -3,7 +3,7 @@
     {
       "name": "nuxt_fussball_api_docs",
       "port": "3000",
-      "script": "./.output/server/index.mjs",
+      "script": "node ./.output/server/index.mjs",
       "watch": true,
       "watch_options": {
         "followSymlinks": false
@@ -14,7 +14,7 @@
       "out_file": "/var/log/nuxt-docs-api.log",
       "error_file": "/var/log/nuxt-docs-api-error.log",
       "combine_logs": true,
-      "max_memory_restart": "100M"
+      "max_memory_restart": "300M"
     }
   ]
 }

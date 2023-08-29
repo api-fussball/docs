@@ -29,4 +29,5 @@ jobs:
       - run: |
           pnpm install
           pnpm run build
-          rsync -vaz -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/srv/football-api/docs-nuxt 
+          rsync -vaz --delete -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/srv/football-api/docs-nuxt
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "source ~/.nvm/nvm.sh; cd /srv/football-api/docs-nuxt; pm2 restart ecosystem.config.json" 
