@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: */?
+Disallow: */api/
+
+Sitemap: https://api-fussball.de/sitemap.xml

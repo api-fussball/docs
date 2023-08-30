@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     "micromark/lib/postprocess.js": "micromark",
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'nuxt-simple-sitemap'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'nuxt-simple-sitemap', 'nuxt-simple-robots'],
   content: {
     // https://content.nuxtjs.org/api/configuration
     highlight: {

@@ -1,12 +1,8 @@
-<!-- ./pages/blog/[…slug.vue] -->
-
 <script setup>
 const { path } = useRoute();
 const { data } = await useAsyncData(`content-${path}`, async () => {
-  // fetch document where the document path matches with the cuurent route
+
   let article = queryContent().where({ _path: path }).findOne();
-  // get the surround information,
-  // which is an array of documeents that come before and after the current document
   let surround = queryContent().only(["_path", "title", "description"]).sort({ date: 1 }).findSurround(path);
 
   return {
