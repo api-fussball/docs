@@ -18,7 +18,7 @@ Der Club-Endpunkt liefert dir Informationen über alle Teams und die URLs, über
 
 ##### Erforderliche Attribute:
 
-`fussball.de_club_id` (_string_) 
+`fussball.de_id` (_string_) 
 
 Die ID der URL auf fussball.de, wo du Informationen über den Verein abrufen kannst.
 

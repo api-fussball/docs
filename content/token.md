@@ -1,9 +1,9 @@
 ---
-title: 'Authentifizierung'
+title: 'Token'
 description: 'Um auf die Endpunkte der Protokoll-API zugreifen zu können, müssen Sie Ihre Anfragen authentifizieren.'
 ---
 
-Um auf die Endpunkte der Protokoll-API zugreifen zu können, musst du deine Anfragen authentifizieren. 
+Um auf die Endpunkte der API-Fussball.de zugreifen zu können, musst du deine Anfragen authentifizieren. 
 In dieser Anleitung werden wir uns ansehen, wie die Authentifizierung funktioniert. Api-fussball.de bietet eine einfache Authentifizierung über Token.
 
 ## Token authentifizieren
@@ -13,7 +13,7 @@ Wenn du deine E-Mail sendest, erhältst du dein persönliches Token, mit dem du 
 
 ```bash
 # Beispiel für eine URL zum Abrufen eines Tokens
-curl -X POST https://api-fussball.de/auth/register \
+curl -X POST https://api-fussball.de/api/auth/register \
   -d '{"email":"my@email.de"}'
 ```
 

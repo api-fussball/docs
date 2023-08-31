@@ -10,7 +10,7 @@ Außerdem erfährst du, wo du als nächstes alle Informationen findest, die du b
 ::InfoBox{type="info"}
 Bevor du Anfragen an die Protokoll-API stellen kannst,
 musst du dir deinen API-Schlüssel von deinem Dashboard holen.
-Du findest ihn unter [authentication](/authentication).
+Du findest ihn unter [Token](/token).
 ::
 
 ## Deine erste API-Anfrage stellen

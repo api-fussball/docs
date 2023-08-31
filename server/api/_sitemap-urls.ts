@@ -3,7 +3,7 @@ export default cachedEventHandler(
     async (e) => {
         const posts = await Promise.all([
             {
-                _path: '/authentication',
+                _path: '/token',
                 modifiedAt: new Date(),
             },
             {

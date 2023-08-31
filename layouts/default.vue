@@ -130,7 +130,7 @@ import {
 
 const navigation = [
   { name: 'Home', href: '/', icon: HomeIcon, current: false },
-  { name: 'Authentifizierung', href: '/authentication', icon: UsersIcon, current: false },
+  { name: 'Token', href: '/token', icon: UsersIcon, current: false },
   { name: 'Quickstart', href: '/quickstart', icon: PlayCircleIcon, current: false },
   { name: 'Fehler', href: '/errors', icon: ExclamationTriangleIcon, current: false },
   { name: 'Fussball.de-Id', href: '/fussballdeid', icon: DocumentDuplicateIcon, current: false }

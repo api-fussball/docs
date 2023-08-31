@@ -1,6 +1,6 @@
 ---
-title: 'JSON-API'
-description: 'Nutze die api-fussball.de, um schnell und einfach auf aktuelle Informationen zu Mannschaften, Spielen und Ergebnissen deiner Fussball-Mannschaften zuzugreifen.'
+title: 'api-fussball.de'
+description: 'API für fussball.de! Nutze die api-fussball.de, um schnell und einfach auf aktuelle Informationen zu Mannschaften, Spielen und Ergebnissen deiner Fussball-Mannschaften zuzugreifen.'
 ---
 # Informationen von fussball.de
 
