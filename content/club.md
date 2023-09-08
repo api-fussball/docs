@@ -39,10 +39,10 @@ __Response:__
       "fussballDeUrl": "/mannschaft/borussia-dortmund-borussia-dortmund-westfalen/-/saison/2122/team-id/01E01A7L58000000VV0AG811VTA8FO8N",
       "name": "Altherren - Borussia Dortmund",
       "urls": {
-        "nextGames": "/club/next_games/01E01A7L58000000VV0AG811VTA8FO8N",
-        "prevGames": "/club/prev_games/01E01A7L58000000VV0AG811VTA8FO8N",
-        "table": "/club/table/01E01A7L58000000VV0AG811VTA8FO8N",
-        "allInfo": "/club/01E01A7L58000000VV0AG811VTA8FO8N"
+        "nextGames": "/api/club/next_games/01E01A7L58000000VV0AG811VTA8FO8N",
+        "prevGames": "/api/club/prev_games/01E01A7L58000000VV0AG811VTA8FO8N",
+        "table": "/api/club/table/01E01A7L58000000VV0AG811VTA8FO8N",
+        "allInfo": "/api/club/01E01A7L58000000VV0AG811VTA8FO8N"
       }
     },
     {
