@@ -11,7 +11,7 @@ was schief gelaufen ist, und eine rudimentäre Fehlersuche durchführen.
 
 ::InfoBox{type="warning"}
 Bevor du dich mit einer Fehlermeldung an den Support wendest, solltest du wissen, dass 99 % aller gemeldeten Fehler in Wirklichkeit Benutzerfehler sind.
-Prüfe daher deinen Code sorgfältig, bevor du dich an den Protokoll-Support wendest.
+Prüfe daher deinen Code sorgfältig, bevor du dich an den Support wendest.
 ::
 
 ---
@@ -34,8 +34,15 @@ Ein 4xx-Statuscode weist auf einen Client-Fehler hin - das heißt, es ist ein _d
 
 Ein 5xx-Statuscode weist auf einen Serverfehler hin - du wirst diesen nicht sehen.
 
+--- 
 
-##### Beispiel für Error resonse
+### Beispiel für 4xx Error resonse:
+
+
+##### Fehlender Header
+
+_Status-Code: 401_
+
 ```json
 {
     "message": "Token in header: \"x-auth-token\" not found",
@@ -44,4 +51,37 @@ Ein 5xx-Statuscode weist auf einen Serverfehler hin - du wirst diesen nicht sehe
 }
 ```
 
+Bitte sende den Header "x-auth-token" mit deinem Token im Request.
 
+---
+
+##### Token nicht erkannt
+
+_Status-Code: 401_
+
+```json
+{
+    "message": "Token L1u609q8l0j6h1g0n9l2U7U0E2SFcIOcAY5sYtM1zV not found",
+    "success": false,
+    "data": []
+}
+```
+
+Dein Token konnte im System nicht gefunden werden. Es wäre ratsam, einen neuen Token zu generieren.
+
+---
+
+##### Anfragelimit überschritten
+
+_Status-Code: 429_
+
+```json
+{
+    "message": "You are allowed a maximum of 30 queries per minute. Please try again later.",
+    "success": false,
+    "data": []
+}
+```
+
+Du hast das Limit von 30 Abfragen pro Minute bei api-fussball.de erreicht. Du kannst es in Kürze erneut versuchen. 
+Sollte das Problem weiterhin bestehen, empfehlen wir, die Ergebnisse unserer Seite zu cachen, beispielsweise für 5 Minuten
