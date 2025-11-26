@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: */?
-Disallow: */api/
-Disallow: */api/*
-Disallow: */mannschaft/
-Disallow: */mannschaft/*
 
-Sitemap: https://api-fussball.de/sitemap.xml
+Sitemap: https://www.api-fussball.de/sitemap.xml

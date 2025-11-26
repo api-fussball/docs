@@ -101,3 +101,50 @@ h6 a {
 .article-item>*>.wrapper {
     @apply flex items-start gap-4;
 }
+
+/* Code Highlighting - Bessere Lesbarkeit */
+pre code {
+    @apply block p-4 rounded-lg overflow-x-auto;
+}
+
+/* Dark Mode Support für Code-Blöcke */
+@media (prefers-color-scheme: dark) {
+    pre.shiki,
+    pre.shiki span {
+        color: var(--shiki-dark) !important;
+        background-color: transparent !important;
+    }
+
+    pre.shiki {
+        @apply bg-gray-900/90 border border-gray-700;
+    }
+
+    /* Bessere Kontraste für dunkelblau im Dark Mode */
+    pre code span[style*="#79B8FF"],
+    pre code span[style*="#9ECBFF"] {
+        color: #88C0D0 !important;
+    }
+
+    /* Inline Code im Dark Mode */
+    code:not(pre code) {
+        @apply bg-gray-800 text-gray-200 px-1.5 py-0.5 rounded;
+    }
+}
+
+/* Light Mode für Code-Blöcke */
+@media (prefers-color-scheme: light) {
+    pre.shiki,
+    pre.shiki span {
+        color: var(--shiki-default) !important;
+        background-color: transparent !important;
+    }
+
+    pre.shiki {
+        @apply bg-gray-50 border border-gray-200;
+    }
+
+    /* Inline Code im Light Mode */
+    code:not(pre code) {
+        @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded;
+    }
+}

@@ -31,10 +31,12 @@ api-docs/
 │
 ├── content/                   # Markdown-Dokumentation
 │   ├── home.md                # Startseite - Übersicht der API
+│   ├── api-uebersicht.md      # Vollständige API-Endpoint-Referenz
 │   ├── quickstart.md          # Schnellstart-Anleitung
 │   ├── token.md               # Token-Authentifizierung
 │   ├── fussballdeid.md        # Erklärung der fussball.de IDs
-│   ├── club.md                # Club/Verein Endpoint Dokumentation
+│   ├── club.md                # Club/Verein Endpoints Dokumentation
+│   ├── team.md                # Team Endpoints Dokumentation
 │   └── errors.md              # Fehlerbehandlung und Status-Codes
 │
 ├── layouts/
@@ -62,7 +64,13 @@ Die Dokumentation besteht aus folgenden Seiten:
 - Hinweise zur kostenlosen Nutzung und Caching-Empfehlungen
 - Erste Schritte
 
-### 2. **Token** (`/token`)
+### 2. **API Übersicht** (`/api-uebersicht`)
+- Vollständige Endpoint-Referenz
+- Schnellübersicht aller verfügbaren Endpoints
+- Beispiel-Workflow
+- Links zu detaillierter Dokumentation
+
+### 3. **Token** (`/token`)
 - Authentifizierung mit API-Token
 - Anleitung zum Token-Erstellen
 - Rate Limits (30 Anfragen/Minute)
@@ -80,12 +88,22 @@ Die Dokumentation besteht aus folgenden Seiten:
 - Beispiele mit Screenshots
 
 ### 5. **Club** (`/club`)
-- Dokumentation des Club/Verein-Endpoints
-- Parameter und Attribute
+- Dokumentation der Club/Verein-Endpoints
+- `/api/club/{id}` - Alle Mannschaften eines Vereins
+- `/api/club/info/{id}` - Alle Infos auf einen Blick (Mannschaften + Spiele)
+- `/api/club/next_games/{id}` - Nächste Spiele aller Mannschaften
+- `/api/club/prev_games/{id}` - Vorherige Spiele aller Mannschaften
 - Request/Response-Beispiele
-- Verfügbare Unter-Endpoints (nextGames, prevGames, table, allInfo)
 
-### 6. **Fehler** (`/errors`)
+### 6. **Team** (`/team`)
+- Dokumentation der Team-Endpoints
+- `/api/team/{id}` - Alle Infos auf einen Blick (Tabelle + Spiele)
+- `/api/team/table/{id}` - Ligatabelle des Teams
+- `/api/team/next_games/{id}` - Nächste Spiele des Teams
+- `/api/team/prev_games/{id}` - Vorherige Spiele des Teams
+- Detaillierte Eigenschaften-Beschreibungen
+
+### 7. **Fehler** (`/errors`)
 - Übersicht der HTTP-Status-Codes
 - Häufige Fehler und Lösungen
 - Beispiele für 4xx Fehler-Responses
@@ -114,7 +132,25 @@ Fehler oder kritischer Hinweis
 
 ### Voraussetzungen
 - Node.js (v18 oder höher)
-- pnpm (empfohlen)
+- pnpm (Package Manager)
+
+### pnpm installieren
+
+Falls du `pnpm` noch nicht installiert hast:
+
+```bash
+# Via npm
+npm install -g pnpm
+
+# Oder via Corepack (empfohlen für Node.js >= 16.13)
+corepack enable
+corepack prepare pnpm@latest --activate
+
+# Oder via Homebrew (macOS)
+brew install pnpm
+```
+
+Weitere Installationsmethoden: https://pnpm.io/installation
 
 ### Dependencies installieren
 
@@ -156,15 +192,38 @@ Die Navigation wird in `layouts/default.vue` definiert und enthält:
 
 **Hauptnavigation:**
 - Home
+- API Übersicht
 - Token
 - Quickstart
-- Fehler
 - Fussball.de-Id
+- Fehler
 
 **Resources:**
-- Club (Verein-Endpoint Dokumentation)
+- Club (Verein-Endpoints Dokumentation)
+- Team (Mannschafts-Endpoints Dokumentation)
 
 Die Navigation ist responsiv und zeigt auf mobilen Geräten ein Hamburger-Menü.
+
+## API Endpoints Übersicht
+
+Die api-fussball.de bietet folgende REST-API Endpoints:
+
+### Authentifizierung
+- `POST /api/auth/register` - API-Token erstellen
+
+### Club (Verein) Endpoints
+- `GET /api/club/{id}` - Liste aller Mannschaften eines Vereins
+- `GET /api/club/info/{id}` - Vollständige Vereinsinfo (Mannschaften + alle Spiele)
+- `GET /api/club/next_games/{id}` - Kommende Spiele aller Vereinsmannschaften
+- `GET /api/club/prev_games/{id}` - Vergangene Spiele aller Vereinsmannschaften
+
+### Team (Mannschaft) Endpoints
+- `GET /api/team/{id}` - Vollständige Teaminfo (Tabelle + alle Spiele)
+- `GET /api/team/table/{id}` - Aktuelle Ligatabelle des Teams
+- `GET /api/team/next_games/{id}` - Kommende Spiele des Teams
+- `GET /api/team/prev_games/{id}` - Vergangene Spiele des Teams
+
+Alle Endpoints (außer `/auth/register`) benötigen den `x-auth-token` Header zur Authentifizierung.
 
 ## Content Management
 

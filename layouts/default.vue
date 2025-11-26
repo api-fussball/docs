@@ -130,13 +130,15 @@ import {
 
 const navigation = [
   { name: 'Home', href: '/', icon: HomeIcon, current: false },
+  { name: 'API Übersicht', href: '/api-uebersicht', icon: DocumentDuplicateIcon, current: false },
   { name: 'Token', href: '/token', icon: UsersIcon, current: false },
   { name: 'Quickstart', href: '/quickstart', icon: PlayCircleIcon, current: false },
-  { name: 'Fehler', href: '/errors', icon: ExclamationTriangleIcon, current: false },
-  { name: 'Fussball.de-Id', href: '/fussballdeid', icon: DocumentDuplicateIcon, current: false }
+  { name: 'Fussball.de-Id', href: '/fussballdeid', icon: DocumentDuplicateIcon, current: false },
+  { name: 'Fehler', href: '/errors', icon: ExclamationTriangleIcon, current: false }
 ]
 const teams = [
-  { id: 1, name: 'club', href: '/club', initial: 'C', current: false }
+  { id: 1, name: 'Club Endpoints', href: '/club', initial: 'C', current: false, description: '4 Endpoints für Vereinsdaten' },
+  { id: 2, name: 'Team Endpoints', href: '/team', initial: 'T', current: false, description: '4 Endpoints für Teamdaten' }
 ]
 
 const { path } = useRoute();
