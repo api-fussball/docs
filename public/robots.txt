@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.api-fussball.de/sitemap.xml
+Sitemap: https://api-fussball.de/sitemap.xml
